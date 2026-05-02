@@ -1,81 +1,60 @@
-# 🧠 Fake News Detection using Machine Learning
+🧠** Fake News Detection using Machine Learning**
+A machine learning pipeline that classifies news articles as Real or Fake using Natural Language Processing (NLP) techniques.
 
-## 📌 Project Overview
+📌 **Problem Statement**
+Misinformation spreads faster than ever online. This project explores whether a machine learning model can reliably distinguish fake news from real news based on article text alone — using only classical NLP techniques (no deep learning required).
 
-This project aims to classify news articles as **Fake** or **Real ** using a Machine Learning approach.
-It uses **Natural Language Processing (NLP)** techniques to clean and transform text data before training a classification model.
-This project was performed using jupyter notebook. 
+⚙️ **Workflow**
+StepDescription1. Data CollectionWELFake Dataset from Kaggle (~72,000 news articles)2. Text PreprocessingLowercasing, stopword removal, stemming via NLTK3. Feature ExtractionTF-IDF vectorization (text → numerical vectors)4. Model TrainingMultinomial Naive Bayes classifier5. EvaluationAccuracy, Precision, Recall, F1-score, Confusion Matrix
 
----
+📊** Model Results**
+MetricScoreAccuracy(Accuracy: 85.45%, Precision=0.85, Recall=0.85, F1 score= 0.85)
+Predicted Real 
+(0)Predicted Fake ✅ 826 correct❌ 151 wrongActual Fake
+(1)Actual Real     ❌ 140 wrong✅ 883 correct
 
-## ⚙️ Methodology
+- 826 real news articles correctly identified as real
+- 883 fake news articles correctly identified as fake
+- 151 real articles wrongly flagged as fake (false positives)
+- 140 fake articles missed as real (false negatives)
 
-The workflow of this project is as follows:
+🛠️ Tech Stack
 
-1. **Data Collection**
+Language: Python 3
+Libraries: Pandas, NumPy, NLTK, Scikit-learn, Matplotlib, Seaborn
+Environment: Jupyter Notebook
 
-   * Dataset: [WELFake Dataset](https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification/data)(from kaggle)
 
-2. **Feature Extraction**
-
-   * TF-IDF (Term Frequency–Inverse Document Frequency)
-   * Convert text into numerical vectors
-
-3. **Model Training**
-
-   * Algorithm: Multinomial Naive Bayes
-
-4. **Evaluation**
-
-   * Accuracy Score
-   * Confusion Matrix
-   * Classification Report (Precision, Recall, F1-score)
-
----
-
-## 📊 Results
-
-* The model is able to classify news articles with good accuracy.
-* Performance is evaluated using:
-
-  * Accuracy
-  * Precision
-  * Recall
-  * F1-score
------
-
-## 🛠️ Technologies Used
-
-* Python
-* Pandas & NumPy
-* NLTK
-* Scikit-learn
-* Matplotlib & Seaborn
-
----
-
-## 📁 Project Structure
-
-```
-Fake-News-Detection/
+📁 Project Structure
+fake-news-detection-ml/
 │
-├── notebook/
-│   └── fake_news_detection.ipynb
-├── data/
-│   └── (dataset not included)
-├── README.md
-└── requirements.txt
-```
+├── fake-news-detection-ml.ipynb   # Main notebook (EDA + model training + evaluation)
+└── README.md
+
+📥 Dataset not included due to file size. Download the WELFake Dataset from Kaggle and place it in the same directory before running.
 
 
-## ⚠️ Notes
+🚀 How to Run
+bash# 1. Clone the repo
+git clone https://github.com/qibbychan/fake-news-detection-ml.git
+cd fake-news-detection-ml
 
-* Dataset is not included due to size limitations you can get it from kaggle 
----
+# 2. Install dependencies
+pip install pandas numpy nltk scikit-learn matplotlib seaborn jupyter
 
-## 🎯 Future Improvements
+# 3. Download NLTK data (run once in Python)
+import nltk
+nltk.download('stopwords')
 
-* Try other models (Logistic Regression, SVM)
-* Improve accuracy with better preprocessing
-* Deploy as a web application
+# 4. Launch Jupyter and open the notebook
+jupyter notebook
 
+🔮 Future Improvements
+
+ Test additional models: Logistic Regression, SVM, Random Forest
+ Experiment with n-gram features for better context capture
+ Deploy as a simple web app using Streamlit or Flask
+
+
+🏷️ Topics
+machine-learning nlp fake-news-detection python scikit-learn jupyter-notebook tfidf naive-bayes
