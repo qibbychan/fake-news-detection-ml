@@ -1,15 +1,19 @@
-🧠** Fake News Detection using Machine Learning**
+🧠**Fake News Detection using Machine Learning**
+
 A machine learning pipeline that classifies news articles as Real or Fake using Natural Language Processing (NLP) techniques.
 
 📌 **Problem Statement**
+
 Misinformation spreads faster than ever online. This project explores whether a machine learning model can reliably distinguish fake news from real news based on article text alone — using only classical NLP techniques (no deep learning required).
 
 ⚙️ **Workflow**
+
 StepDescription1. Data CollectionWELFake Dataset from Kaggle (~72,000 news articles)2. Text PreprocessingLowercasing, stopword removal, stemming via NLTK3. Feature ExtractionTF-IDF vectorization (text → numerical vectors)4. Model TrainingMultinomial Naive Bayes classifier5. EvaluationAccuracy, Precision, Recall, F1-score, Confusion Matrix
 
-📊** Model Results**
+📊**Model Results**
+
 MetricScoreAccuracy(Accuracy: 85.45%, Precision=0.85, Recall=0.85, F1 score= 0.85)
-Predicted Real 
+
 (0)Predicted Fake ✅ 826 correct❌ 151 wrongActual Fake
 (1)Actual Real     ❌ 140 wrong✅ 883 correct
 
