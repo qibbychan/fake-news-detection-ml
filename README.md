@@ -39,7 +39,8 @@ fake-news-detection-ml/
 
 
 🚀 How to Run
-bash# 1. Clone the repo
+bash
+# 1. Clone the repo
 git clone https://github.com/qibbychan/fake-news-detection-ml.git
 cd fake-news-detection-ml
 
